@@ -77,9 +77,13 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'faker'
   gem 'pry-rails'
+  gem 'pry-doc'
   gem 'pry-rescue'
   gem 'rspec-rails'
   gem 'rubocop'
+  # http://ruby-rails.hatenadiary.com/entry/20141024/1414160189
+  gem 'hirb'
+  gem 'hirb-unicode'
 end
 
 group :production do
@@ -88,8 +92,12 @@ end
 
 group :test do
   gem 'capybara'
+  gem 'poltergeist'
   gem 'database_cleaner'
   gem 'launchy'
-  gem 'selenium-webdriver'
+
+  # http://unageanu.hatenablog.com/entry/2015/03/22/144950
+  gem 'simplecov', require: false
+  gem 'codeclimate-test-reporter', require: false
 end
 
